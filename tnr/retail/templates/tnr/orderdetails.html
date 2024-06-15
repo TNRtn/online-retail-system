@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<title>NEW ORDER DeTail</title>
+</head>
+<body>
+	<div class="container-fluid mt-4">
+		<div class="row my-2">
+			<div class="mx-auto col-10 col-md-8 col-lg-6">
+				<div class="card shadow-lg boder border-primary">
+					<div class="card-body">
+						<h4>New Order</h4>
+						<form method="post" action="." enctype="multipart/form-data">
+							{% csrf_token %}
+							{% for i in k %}
+								{{i}}
+							{% endfor %}
+							<div class="row">
+								<div class="col">
+									<input type="reset" value="Clear" class="btn btn-outline-danger form-control">
+								</div>
+								<div class="col">
+									<input type="submit" value="Create" class="btn btn-outline-success form-control">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+</body>
+</html>

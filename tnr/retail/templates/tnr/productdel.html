@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<title>delete product</title>
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="card col-md-5 ma-auto shadow-lg">
+			<div class="card-body">
+				<h4>Are you want to delete this product?</h4>
+				<h6>product Name : {{z.productname}}</h6>
+				<h6>product Cost    :{{z.productprice}}</h6>
+				<h6>Product Image : <img src="/media/{{z.productimage}}" width="100" height="100"></h6>
+				<form method="post">
+					{% csrf_token %}
+					<div class="row">
+						<div class="col">
+							<a href="{% url 'productlist' %}" class="form-control btn btn-outline-info">No</a>
+						</div>
+						<div class="col">
+							<input type="submit" valu="Yes" class="btn btn-outline-danger form-control">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

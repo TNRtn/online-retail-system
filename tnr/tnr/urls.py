@@ -20,6 +20,7 @@ from django.urls import path
 from retail import views
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/index/')),
     path('admin/', admin.site.urls),
     path('t/',views.sample),
     path('index/',views.home,name="index"),

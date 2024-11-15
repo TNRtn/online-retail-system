@@ -119,7 +119,6 @@ pyrsistent==0.19.3
 python-dateutil==2.8.2
 python-memcached==1.59
 pytz==2020.4
-pywin32==306
 pywinpty==2.0.10
 pyzmq==25.1.0
 qtconsole==5.4.3

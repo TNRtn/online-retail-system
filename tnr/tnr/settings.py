@@ -26,7 +26,10 @@ SECRET_KEY = '(-#dmj0hlpfazum^n=7p1f(tund5uo0kg&@m*fzm7%_#wf8)%8'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://online-retail-tnr2.onrender.com',  # Add your Render domain here
+    # You can add more domains if needed
+]
 
 # Application definition
 
